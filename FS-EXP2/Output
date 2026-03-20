@@ -1,0 +1,54 @@
+Hibernate: 
+    create table Student (
+        id integer not null,
+        marks integer not null,
+        name varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    insert
+    into
+        Student
+        (marks, name, id)
+    values
+        (?, ?, ?)
+Student Created
+Hibernate: 
+    select
+        s1_0.id,
+        s1_0.marks,
+        s1_0.name
+    from
+        Student s1_0
+    where
+        s1_0.id=?
+Student Not Found
+Hibernate:
+    select
+        s1_0.id,
+        s1_0.marks,
+        s1_0.name
+    from
+        Student s1_0
+    where
+        s1_0.id=?
+Student Updated
+Hibernate: 
+    select
+        s1_0.id,
+        s1_0.marks,
+        s1_0.name
+    from
+        Student s1_0
+    where
+        s1_0.id=?
+Student Deleted
+[WARNING] thread Thread[#41,mysql-cj-abandoned-connection-cleanup,5,com.example.App] was interrupted [WARNING] thread Thread[#41,mysql-cj-abandoned-connection-cleanup,5,com.example.App] was interrupted [WARNING] thread Thread[#41,mysql-cj-abandoned-connection-cleanup,5,com.example.App] was interrupted but is still alive after waiting at least 14999msecs
+[WARNING] thread Thread[#41,mysql-cj-abandoned-connection-cleanup,5,com.example.App] will linger despite being asked to die via interruption
+[WARNING] NOTE: 1 thread(s) did not finish despite being asked to via interruption. This is not a problem with exec:java, it is a problem with the running code. Although not serious, it should be remedied.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  23.789 s
+[INFO] Finished at: 2026-01-01T09:41:03+05:30
+[INFO] ------------------------------------------------------------------------
